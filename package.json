@@ -1,6 +1,6 @@
 {
   "name": "yzt.css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "luventa <luventa@outlook.com>",
   "description": "OneConnect CSS framework",
   "main": "index.scss",
@@ -20,6 +20,7 @@
   },
   "files": [
     "yzt",
+    "fonts",
     "css",
     "scss"
   ]
