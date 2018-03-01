@@ -1,3 +1,8 @@
 @charset "utf-8";
 
-@import "gammalab/iconfont.scss";
+// Variables
+$gammalab-font-path: "../fonts" !default;
+$gammalab-timestamp: "1519714645487" !default;
+
+// iconfonts
+@import "gammalab.scss";
