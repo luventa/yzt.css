@@ -1,0 +1,84 @@
+// variables
+$input-item-color: $text;
+$input-item-disabled-color: $text-lighter;
+$input-addon-color: $text-lighter;
+$input-addon-active-color: $text-light;
+
+.input {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  align-items: center;
+  position: relative;
+  vertical-align: middle;
+
+  > label {
+    width: auto;
+    color: $input-item-color;
+
+    @for $i from 1 through 8 {
+      &.is-#{$i} {
+        width: #{$i + 1.25}rem;
+      }
+    }
+  }
+
+  > input {
+    border: 0px;
+    font-size: 1rem;
+    outline: none;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+    &:focus {
+      & + .prepend,
+      & + .append {
+        color: $input-addon-active-color;
+      }
+    }
+  }
+
+  // addon
+  &.has-prepend {
+    > input {
+      padding-left: 2rem;
+    }
+
+    .prepend {
+      left: 0;
+    }
+  }
+
+  &.has-append {
+    > input {
+      padding-right: 2rem;
+    }
+
+    .append {
+      right: 0;
+    }
+  }  
+
+  .append,
+  .prepend {
+    color: $input-addon-color;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+  }
+
+  // Modifiers
+  &[disabled] {
+    > label,
+    > input,
+    .append,
+    .prepend {
+      color: $input-item-disabled-color;
+    }
+  }
+}

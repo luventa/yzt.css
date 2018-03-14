@@ -31,6 +31,12 @@ section + hr {
   background-color: #e2d6f2;
 }
 
+.demo-section > .demo-content > div.mobile-demo {
+  width: 25.4375rem;
+  background-color: #f9f9f9;
+  padding: 0 1rem 1rem;
+}
+
 .demo-section > .demo-content > div:last-child > span {
   margin-right: 0.5rem;
 }

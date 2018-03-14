@@ -1,0 +1,40 @@
+// variables
+$list-header-color: $grey-light;
+$list-body-background-color: $white;
+$list-item-color: $text;
+$list-footer-color: $text-light;
+$list-border-color: #E5E5E5;
+
+.list {
+  > header {
+    padding: 1rem 0.75rem 0.375rem 1.125rem;
+    font-size: 0.75rem;
+    color: $list-header-color;
+    background: transparent;
+  }
+
+  > .list-body {
+    position: relative;
+    padding-left: 1.125rem;
+    background: $list-body-background-color;
+    border-top: 1px solid $list-border-color;
+    border-bottom: 1px solid $list-border-color;
+  }
+}
+
+.list-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 1rem;
+  display: flex;
+  padding-right: 1rem;
+  vertical-align: middle;
+  align-items: center;
+  height: 3.375rem;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $list-border-color;
+  }
+}
