@@ -1,4 +1,4 @@
-/* Typography */
+// Typography
 
 $family-sans-serif: "PingFangSC-Regular", "SFUIText-Medium", "Microsoft YaHei", BlinkMacSystemFont, "Arial", sans-serif !default;
 $family-monospace:  "Inconsolata", "Consolas", "Monaco", monospace !default;
@@ -17,7 +17,7 @@ $weight-normal:   400 !default;
 $weight-semibold: 500 !default;
 $weight-bold:     700 !default;
 
-/* Colors */
+// Colors
 
 $black:        #0a0a0a !default;
 $black-bis:    #121212 !default;
@@ -42,7 +42,7 @@ $blue:         #055fae !default;
 $purple:       #b86bff !default;
 $red:          #f4264f !default;
 
-/* Miscellaneous */
+// Miscellaneous
 
 $gap: 32px !default;
 $easing: ease-out !default;

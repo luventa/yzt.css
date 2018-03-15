@@ -5,11 +5,11 @@ $input-addon-color: $text-lighter;
 $input-addon-active-color: $text-light;
 
 .input {
-  display: flex;
-  flex: 1;
+  @include flex;
+  height: 3.375rem;
+  box-sizing: border-box;
   align-self: stretch;
   align-items: center;
-  position: relative;
   vertical-align: middle;
 
   > label {
