@@ -620,10 +620,13 @@
       <div>
         <h3 class="title is-4">适用</h3>
         <p>
-          为灵活兼容多套iconfont库，<code>.icon</code> 仅会控制行内元素的尺寸和颜色
+          <code>.tabs</code> <code>.tab-list</code> <code>.tab-content</code> 等三个标签页样式用于构建可切换的标签页
         </p>
         <p>
-          具体显示内容需内嵌<code>&lt;i&gt;</code> 标签使用
+          在 <code>.tab-list</code> 容器中需使用ul元素作为标签切换列表
+        </p>
+        <p>
+          <code>&lt;li class="is-active"&gt;</code> 可切换选中标签的样式
         </p>
       </div>
       <div>
@@ -638,137 +641,27 @@
               </li>
               <li>
                 <div class="label is-small">
-                  <p>万分收益</p>
+                  <p>万份收益</p>
                   <p>1.0581元</p>
                 </div>
               </li>
               <li>
-                <div class="label is-small">其他信息
-                </div>
+                <div class="label is-small">其他信息</div>
               </li>
             </ul>
           </div>
           <div class="tab-content">
-            asd
+            <div class="tab-pane is-active">
+              7日年化
+            </div>
+            <div class="tab-pane">
+              万份收益
+            </div>
+            <div class="tab-pane">
+              其他信息
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <hr>
-    <div class="demo-content">
-      <div>
-        <h3 class="title is-4">尺寸</h3>
-        <p>
-          <code>.icon</code> 有以下几种尺寸样式供配合使用
-          <ul class="demo-list">
-            <li>
-              <code>&lt;class="icon is-large"&gt;</code> 大尺寸图标
-            </li>
-            <li>
-              <code>&lt;class="icon is-medium"&gt;</code> 中等尺寸图标
-            </li>
-            <li>
-              <code>&lt;class="icon"&gt;</code> 默认尺寸图标
-            </li>
-            <li>
-              <code>&lt;class="icon is-small"&gt;</code> 小尺寸图标
-            </li>
-          </ul>
-        </p>
-      </div>
-      <div>
-        <span class="icon is-large">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-medium">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-small">
-          <i class="gammalab icon-universal"></i>
-        </span>
-      </div>
-    </div>
-    <hr>
-    <div class="demo-content">
-      <div>
-        <h3 class="title is-4">颜色</h3>
-        <p>
-          与 <code>Label</code> 类似 <code>.icon</code> 也有多种颜色样式可配合使用
-          <ul class="demo-list">
-            <li>
-              按颜色标注：
-              <code>.is-white</code>
-              <code>.is-black</code>
-              <code>.is-light</code>
-              <code>.is-darker</code>
-            </li>
-            <li>
-              按功能标注：
-              <code>.is-primary</code>
-              <code>.is-info</code>
-              <code>.is-link</code>
-              <code>.is-warning</code>
-              <code>.is-danger</code>
-              <code>.is-success</code>
-            </li>
-          </ul>
-        </p>
-      </div>
-      <div>
-        <span class="icon">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-white">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-black">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-light">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-dark">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <br>
-        <span class="icon is-primary">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-info">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-link">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-warning">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-danger">
-          <i class="gammalab icon-universal"></i>
-        </span>
-        <span class="icon is-success">
-          <i class="gammalab icon-universal"></i>
-        </span>
-      </div>
-    </div>
-    <hr>
-    <div class="demo-content">
-      <div>
-        <h3 class="title is-4">其他</h3>
-        <p>
-          由于 <code>.icon</code> 使用了iconfont的fontclass以灵活搭配字体库
-        </p>
-        <p>
-          因此某些非标准尺寸的icon会出现诡异的显示方式，如右图
-        </p>
-      </div>
-      <div>
-        <span class="icon is-success">
-          <i class="gammalab icon-GammaLab"></i>
-        </span>
       </div>
     </div>
   </section>

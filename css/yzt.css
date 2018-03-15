@@ -1583,6 +1583,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 
 .tab-content {
   height: auto;
+}
+
+.tab-content .tab-pane {
   padding: 0.75rem;
+  display: none;
+}
+
+.tab-content .tab-pane.is-active {
+  display: block;
 }
 /*# sourceMappingURL=yzt.css.map */

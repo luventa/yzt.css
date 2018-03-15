@@ -80,5 +80,13 @@ $tab-list-active-color: $primary;
 // tab panel
 .tab-content {
   height: auto;
-  padding: 0.75rem;
+  
+  .tab-pane {
+    padding: 0.75rem;
+    display: none;
+
+    &.is-active {
+      display: block
+    }
+  }
 }
