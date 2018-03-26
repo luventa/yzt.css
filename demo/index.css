@@ -31,8 +31,21 @@ section + hr {
   background-color: #e2d6f2;
 }
 
+.demo-section > .demo-content > div:last-child > iframe {
+  width: 24rem;
+  height: 34.25rem;
+  border: none;
+  box-shadow: 0 0 1px 0 grey;
+}
+
+.demo-section > .demo-content > div:last-child > iframe html {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
 .demo-section > .demo-content > div.mobile-demo {
   width: 25.4375rem;
+  height: 32rem;
   background-color: #f9f9f9;
   padding: 0 1rem 1rem;
 }

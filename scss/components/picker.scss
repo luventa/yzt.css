@@ -1,0 +1,25 @@
+// variables
+$picker-label-color: $text;
+$picker-placeholder-color: $grey-light;
+
+.picker {
+  @include flex;
+  height: 3.375rem;
+  box-sizing: border-box;
+  align-self: stretch;
+  align-items: center;
+  vertical-align: middle;
+
+  > label {
+  }
+
+  > span {
+    }
+
+    > i {
+    }
+  }
+}
+
+.picker-view {
+}

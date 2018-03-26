@@ -1,14 +1,12 @@
 @import "variables";
 
-/* Variables */
-
+// Variables
 $control-radius:             $radius !default
 $control-radius-small:       $radius-small !default
 $control-padding-vertical:   calc(0.375em - 1px) !default
 $control-padding-horizontal: calc(0.625em - 1px) !default
 
-/* Control mixin */
-
+// Control mixin
 @mixin control {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -41,8 +39,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   }
 }
 
-/* Control size mixin */
-
+// Control size mixin
 @mixin control-small {
   border-radius: $control-radius-small;
   font-size: $size-small;
@@ -56,6 +53,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   font-size: $size-large;
 }
 
+// Clear fix
 @mixin clearfix {
   &:after {
     clear: both;
@@ -64,6 +62,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   }
 }
 
+// Center
 @mixin center($width, $height: 0) {
   position: absolute;
   @if $height != 0 {
@@ -75,6 +74,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   }
 }
 
+// Loader
 @mixin loader {
   animation: spinAround 500ms infinite linear;
   border: 2px solid $border;
@@ -92,6 +92,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   -webkit-overflow-scrolling: touch;
 }
 
+// Overlay
 @mixin overlay($offset: 0) {
   bottom: $offset;
   left: $offset;
@@ -100,6 +101,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   top: $offset;
 }
 
+// Placeholder
 @mixin placeholder {
   $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
   @each $placeholder in $placeholders {
@@ -117,6 +119,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   user-select: none;
 }
 
+// Flex container
 @mixin flex {
   box-sizing: border-box;
   display: flex;
@@ -127,7 +130,26 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   height: 100%;
 }
 
+// Text ellipsis
 @mixin text-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// Push up
+@mixin popup {
+  position: fixed;
+  bottom: -20rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 1024;
+  transition-duration: 0.3s;
+  transform: translateZ(0);
+
+  &.is-active {
+    bottom: 0;
+  }
 }

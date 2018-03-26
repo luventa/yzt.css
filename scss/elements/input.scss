@@ -1,6 +1,7 @@
 // variables
 $input-item-color: $text;
 $input-item-disabled-color: $text-lighter;
+$input-placeholder-color: $placeholder;
 $input-addon-color: $text-lighter;
 $input-addon-active-color: $text-light;
 
@@ -36,6 +37,10 @@ $input-addon-active-color: $text-light;
       & + .append {
         color: $input-addon-active-color;
       }
+    }
+
+    @include placeholder {
+      color: $input-placeholder-color;
     }
   }
 

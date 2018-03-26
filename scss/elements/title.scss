@@ -1,4 +1,4 @@
-/* Variables */
+// Variables
 
 $title-color: $grey-darker !default;
 $title-size: $size-3 !default;
@@ -19,7 +19,7 @@ $title-colors: ("white": $white, "black": $black) !default;
   line-height: 1.5;
   word-break: break-word;
 
-  /* Sizes */
+  // Sizes
   @each $size in $sizes {
     $i: index($sizes, $size);
     &.is-#{$i} {
@@ -27,7 +27,7 @@ $title-colors: ("white": $white, "black": $black) !default;
     }
   }
 
-  /* Colors */
+  // Colors
   @each $name, $color in $title-colors {
     &.is-#{$name} {
       color: $color;
