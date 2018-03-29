@@ -1,0 +1,119 @@
+// Variables
+$flow-item-icon-size: $size-normal;
+$flow-done-color: $primary;
+$flow-process-color: #cccccc;
+$flow-item-title-size: $size-normal;
+$flow-item-title-color: #666666;
+$flow-item-content-size: $size-small;
+$flow-item-content-color: $placeholder;
+
+.flow {
+  @include flex;
+  height: auto;
+  align-items: center;
+  justify-content:space-between;
+  padding: 1rem 2.25rem 4rem;
+
+  &.is-vertical {
+    width: $flow-item-icon-size;
+    padding: 1rem calc(100vw - 2.25rem) 2rem 2.25rem;
+    min-height: 12rem;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    > .flow-line {
+      width: 2px;
+      background: -webkit-linear-gradient($flow-done-color 50% , $flow-process-color 50%);
+      background: -o-linear-gradient($flow-done-color 50% , $flow-process-color 50%);
+      background: -moz-linear-gradient($flow-done-color 50% , $flow-process-color 50%);
+      background: linear-gradient($flow-done-color 50% , $flow-process-color 50%);
+
+      &.done {
+        background: $flow-done-color;
+      }
+    }
+
+    > .flow-item {
+      > div {
+        top: 50%;
+        left: 2rem;
+        transform: translate(0, -27.5%);
+        text-align: left;
+
+        > strong {
+          color: $flow-item-content-color;
+        }
+
+        > em {
+          white-space: nowrap;
+        }
+      }
+
+      &.done > div > strong {
+        color: $flow-item-title-color;
+      }
+    }
+  }
+}
+
+.flow-line {
+  flex: 1;
+  background: -webkit-linear-gradient(left, $flow-done-color 50% , $flow-process-color 50%);
+  background: -o-linear-gradient(right, $flow-done-color 50% , $flow-process-color 50%);
+  background: -moz-linear-gradient(right, $flow-done-color 50% , $flow-process-color 50%);
+  background: linear-gradient(to right, $flow-done-color 50% , $flow-process-color 50%);
+  height: 2px;
+  position: relative;
+
+  &.done {
+    background: $flow-done-color;
+  }
+}
+
+.flow-item {
+  width: $flow-item-icon-size;
+  height: $flow-item-icon-size;
+  position: relative;
+  background-size: $flow-item-icon-size;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M512%201024C229.6%201024%200%20794.4%200%20512S229.6%200%20512%200s512%20229.6%20512%20512S794.4%201024%20512%201024zM512%2096c-229.6%200-416%20186.4-416%20416%200%20229.6%20186.4%20416%20416%20416s416-186.4%20416-416C928%20282.4%20741.6%2096%20512%2096z%22%20p-id%3D%225043%22%20fill%3D%22%23cccccc%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+
+  > div {
+    top: 1.25rem;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    text-align: center;
+
+    > strong, em {
+      display: block;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    > strong {
+      color: $flow-item-title-color;
+      font-size: $flow-item-title-size;
+    }
+
+    > em {
+      color: $flow-item-content-color;
+      font-size: $flow-item-content-size;
+      word-wrap: normal;
+      white-space: normal;
+    }
+  }
+
+  &:first-child > div {
+    text-align: left;
+  }
+
+  &:last-child > div {
+    text-align: right;
+  }
+
+  &.done {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221024%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20id%3D%22svg_1%22%20fill%3D%22%23b2dbff%22%20d%3D%22m0%2C512c0%2C-282.76979%20229.80559%2C-512%20512%2C-512c282.76979%2C0%20512%2C229.80559%20512%2C512c0%2C282.76979%20-229.80559%2C512%20-512%2C512c-282.76979%2C0%20-512%2C-229.80559%20-512%2C-512z%22%2F%3E%3Cpath%20transform%3D%22null%22%20id%3D%22svg_3%22%20fill%3D%22%230677DA%22%20d%3D%22m112.889%2C516.69136c0%2C-220.66841%20179.33611%2C-399.5555%20399.5555%2C-399.5555c220.66841%2C0%20399.5555%2C179.33611%20399.5555%2C399.5555c0%2C220.66841%20-179.33611%2C399.5555%20-399.5555%2C399.5555c-220.66841%2C0%20-399.5555%2C-179.33611%20-399.5555%2C-399.5555z%22%2F%3E%3C%2Fsvg%3E");
+  }
+}

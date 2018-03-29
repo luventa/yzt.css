@@ -136,7 +136,7 @@ $control-padding-horizontal: calc(0.625em - 1px) !default
   white-space: nowrap;
 }
 
-// Push up
+// Pop up
 @mixin popup {
   position: fixed;
   bottom: -20rem;
