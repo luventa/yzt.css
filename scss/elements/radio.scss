@@ -1,15 +1,16 @@
 // variables
-$segment-color: $grey-light;
-$segment-background-color: $white;
-$segment-border-color: $grey-light;
-$segment-active-color: $text;
+$radio-color: $grey-light;
+$radio-background-color: $white;
+$radio-border-color: $grey-light;
+$radio-active-color: $text;
+$radio-active-background-color: #F5F5F5;
 
-.segments {
+.radio-group {
   @include flex;
   @include unselectable;
   height: 1.75rem;
 
-  .segment {
+  .radio {
     @include flex;
     @include text-ellipsis;
     align-self: stretch;
@@ -19,10 +20,16 @@ $segment-active-color: $text;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     line-height: 1.5;
-    color: $segment-color;
-    background-color: $segment-background-color;
-    border: 1px solid $segment-border-color;
+    color: $radio-color;
+    background-color: $radio-background-color;
+    border: 1px solid $radio-border-color;
     cursor: pointer;
+
+    input[type="radio"] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
     &:first-child {
       border-radius: $radius 0 0 $radius;
@@ -37,8 +44,8 @@ $segment-active-color: $text;
     }
 
     &.is-active {
-      color: $segment-active-color;
-      background-color: #F5F5F5;
+      color: $radio-active-color;
+      background-color: $radio-active-background-color;
     }
   }
 }

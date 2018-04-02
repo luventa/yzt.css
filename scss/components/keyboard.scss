@@ -2,11 +2,12 @@
 $numeric-key-size: 1.75rem;
 $numeric-key-color: #030303;
 $numeric-key-active-background: #dddddd;
+$numeric-key-border-color: $background;
+$numeric-key-dark-background: #c6cbd4;
 $numeric-confirm-key-size: 1.25rem;
 
 // numeric keyboard
 .numeric-keyboard {
-  @include popup;
   width: 100%;
   height: 12.5rem;
   background-color: white;
@@ -23,6 +24,7 @@ $numeric-confirm-key-size: 1.25rem;
       vertical-align: middle;
       color: $numeric-key-color;
       font-size: $numeric-key-size;
+      border: 1px solid $numeric-key-border-color;
 
       &.key-delete,
       &.key-hide {
@@ -44,12 +46,34 @@ $numeric-confirm-key-size: 1.25rem;
         color: $primary-invert;
         background-color: $primary;
 
-        &.is-active {
+        &.is-active,
+        &:active {
           background-color: darken($primary, 10%);
+        }
+
+        &.is-disabled,
+        &[disabled] {
+          background-color: rgba($primary, .64);
+          color: rgba(white, .64);
+
+          &.is-active,
+          &:active {
+            background-color: rgba($primary, .64);
+          }
         }
       }
 
-      &.is-active {
+      &.is-darked {
+        background-color: $numeric-key-dark-background;
+
+        &.is-active,
+        &:active {
+          background-color: $numeric-key-dark-background;
+        }
+      }
+
+      &.is-active,
+      &:active {
         background-color: $numeric-key-active-background;
       }
     }

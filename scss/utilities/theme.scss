@@ -12,6 +12,7 @@ $red-invert: findColorInvert($red) !default;
 /* Tone */
 
 $primary: $cyan !default;
+$primary-darker: $blue !default;
 $info: $blue !default;
 $success: $green !default;
 $warning: $yellow !default;
@@ -20,6 +21,7 @@ $light: $white-ter !default;
 $dark: $grey-darker !default;
 
 $primary-invert: $blue-invert !default;
+$primary-darker-invert: $blue-invert !default;
 $info-invert: $cyan-invert !default;
 $success-invert: $green-invert !default;
 $warning-invert: $yellow-invert !default;

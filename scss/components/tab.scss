@@ -49,8 +49,8 @@ $tab-list-active-color: $primary;
         left: calc(50% - 8px);
         right: 0;
         bottom: 0;
-        width:0; 
-        height:0; 
+        width:0;
+        height:0;
         border-left:5px solid transparent;
         border-right:5px solid transparent;
         border-bottom:6px solid $tab-list-active-color;
@@ -80,9 +80,8 @@ $tab-list-active-color: $primary;
 // tab panel
 .tab-content {
   height: auto;
-  
+
   .tab-pane {
-    padding: 0.75rem;
     display: none;
 
     &.is-active {

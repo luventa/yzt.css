@@ -34,10 +34,6 @@ $title-colors: ("white": $white, "black": $black) !default;
     }
   }
 
-  &:not(:last-child) {
-    margin-bottom: 0.25rem;
-  }
-
   em,
   span{
     font-weight: inherit;
