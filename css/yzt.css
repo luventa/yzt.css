@@ -1857,6 +1857,94 @@ a.has-text-danger:hover, a.has-text-danger:focus {
           justify-content: space-between;
 }
 
+.flow .flow-line {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.flow .flow-line > li:nth-child(odd) {
+  width: 0.875rem;
+  height: 0.875rem;
+  background-size: 0.875rem;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M512%201024C229.6%201024%200%20794.4%200%20512S229.6%200%20512%200s512%20229.6%20512%20512S794.4%201024%20512%201024zM512%2096c-229.6%200-416%20186.4-416%20416%200%20229.6%20186.4%20416%20416%20416s416-186.4%20416-416C928%20282.4%20741.6%2096%20512%2096z%22%20p-id%3D%225043%22%20fill%3D%22%23cccccc%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+}
+
+.flow .flow-line > li:nth-child(odd).done, .flow .flow-line > li:nth-child(odd).process {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221024%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%3E%3Cpath%20d%3D%22m0%2C512c0%2C-282.76979%20229.80559%2C-512%20512%2C-512c282.76979%2C0%20512%2C229.80559%20512%2C512c0%2C282.76979%20-229.80559%2C512%20-512%2C512c-282.76979%2C0%20-512%2C-229.80559%20-512%2C-512z%22%20fill%3D%22%23b2dbff%22%20%2F%3E%3Cpath%20d%3D%22m112.889%2C516.69136c0%2C-220.66841%20179.33611%2C-399.5555%20399.5555%2C-399.5555c220.66841%2C0%20399.5555%2C179.33611%20399.5555%2C399.5555c0%2C220.66841%20-179.33611%2C399.5555%20-399.5555%2C399.5555c-220.66841%2C0%20-399.5555%2C-179.33611%20-399.5555%2C-399.5555z%22%20fill%3D%22%230677DA%22%20%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.flow .flow-line > li:nth-child(odd) + li {
+  height: 2px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  background: #cccccc;
+}
+
+.flow .flow-line > li:nth-child(odd).done + li {
+  background: #0677da;
+}
+
+.flow .flow-line > li:nth-child(odd).process + li {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0677da), color-stop(50%, #cccccc));
+  background: linear-gradient(to right, #0677da 50%, #cccccc 50%);
+}
+
+.flow .flow-content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 1.125rem;
+}
+
+.flow .flow-content > li {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5 1 0px;
+          flex: 1.5 1 0;
+  text-align: center;
+}
+
+.flow .flow-content > li:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: left;
+}
+
+.flow .flow-content > li:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.flow .flow-content strong,
+.flow .flow-content em {
+  display: block;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.flow .flow-content strong {
+  color: #666666;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  padding-bottom: 0.375rem;
+}
+
+.flow .flow-content em {
+  color: #999999;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  word-wrap: normal;
+  white-space: normal;
+  word-break: keep-all;
+}
+
 .flow.is-vertical {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1880,6 +1968,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 2rem 1.125rem;
 }
 
 .flow.is-vertical .flow-line {
@@ -1919,7 +2008,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .flow.is-vertical .flow-content > li:not(:last-child) {
-  margin-bottom: 1.625rem;
+  height: 4rem;
 }
 
 .flow.is-vertical .flow-content > li.done > strong,
@@ -1928,94 +2017,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .flow.is-vertical .flow-content > li strong {
+  font-family: "PingFangSC-Medium", "SFUIText-Medium", "Microsoft YaHei", BlinkMacSystemFont, "Arial", sans-serif;
   color: #999999;
   padding-bottom: 0.75rem;
-}
-
-.flow-line {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 1.125rem;
-  margin-bottom: 0.625rem;
-}
-
-.flow-line > li:nth-child(odd) {
-  width: 0.875rem;
-  height: 0.875rem;
-  background-size: 0.875rem;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M512%201024C229.6%201024%200%20794.4%200%20512S229.6%200%20512%200s512%20229.6%20512%20512S794.4%201024%20512%201024zM512%2096c-229.6%200-416%20186.4-416%20416%200%20229.6%20186.4%20416%20416%20416s416-186.4%20416-416C928%20282.4%20741.6%2096%20512%2096z%22%20p-id%3D%225043%22%20fill%3D%22%23cccccc%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
-}
-
-.flow-line > li:nth-child(odd).done, .flow-line > li:nth-child(odd).process {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221024%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%3E%3Cpath%20d%3D%22m0%2C512c0%2C-282.76979%20229.80559%2C-512%20512%2C-512c282.76979%2C0%20512%2C229.80559%20512%2C512c0%2C282.76979%20-229.80559%2C512%20-512%2C512c-282.76979%2C0%20-512%2C-229.80559%20-512%2C-512z%22%20fill%3D%22%23b2dbff%22%20%2F%3E%3Cpath%20d%3D%22m112.889%2C516.69136c0%2C-220.66841%20179.33611%2C-399.5555%20399.5555%2C-399.5555c220.66841%2C0%20399.5555%2C179.33611%20399.5555%2C399.5555c0%2C220.66841%20-179.33611%2C399.5555%20-399.5555%2C399.5555c-220.66841%2C0%20-399.5555%2C-179.33611%20-399.5555%2C-399.5555z%22%20fill%3D%22%230677DA%22%20%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-
-.flow-line > li:nth-child(odd) + li {
-  height: 2px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  background: #cccccc;
-}
-
-.flow-line > li:nth-child(odd).done + li {
-  background: #0677da;
-}
-
-.flow-line > li:nth-child(odd).process + li {
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0677da), color-stop(50%, #cccccc));
-  background: linear-gradient(to right, #0677da 50%, #cccccc 50%);
-}
-
-.flow-content {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.flow-content > li {
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5 1 0px;
-          flex: 1.5 1 0;
-  text-align: center;
-}
-
-.flow-content > li:first-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: left;
-}
-
-.flow-content > li:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: right;
-}
-
-.flow-content strong,
-.flow-content em {
-  display: block;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.flow-content strong {
-  font-family: "PingFangSC-Medium", "SFUIText-Medium", "Microsoft YaHei", BlinkMacSystemFont, "Arial", sans-serif;
-  color: #666666;
-  font-size: 0.875rem;
-  line-height: 0.875rem;
-  padding-bottom: 0.375rem;
-}
-
-.flow-content em {
-  color: #999999;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  word-wrap: normal;
-  white-space: normal;
 }
 /*# sourceMappingURL=yzt.css.map */
