@@ -28,13 +28,14 @@ $flow-item-vertical-font-family: "PingFangSC-Medium", "SFUIText-Medium", "Micros
     > li:nth-child(odd) {
       width: $flow-item-icon-size;
       height: $flow-item-icon-size;
-      background-size: $flow-item-icon-size;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M512%201024C229.6%201024%200%20794.4%200%20512S229.6%200%20512%200s512%20229.6%20512%20512S794.4%201024%20512%201024zM512%2096c-229.6%200-416%20186.4-416%20416%200%20229.6%20186.4%20416%20416%20416s416-186.4%20416-416C928%20282.4%20741.6%2096%20512%2096z%22%20p-id%3D%225043%22%20fill%3D%22%23cccccc%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
-      
+      background: #FFF;
+      border: .1rem solid #ccc;
+      border-radius: 100%;
+
       &.done,
       &.process {
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221024%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%3E%3Cpath%20d%3D%22m0%2C512c0%2C-282.76979%20229.80559%2C-512%20512%2C-512c282.76979%2C0%20512%2C229.80559%20512%2C512c0%2C282.76979%20-229.80559%2C512%20-512%2C512c-282.76979%2C0%20-512%2C-229.80559%20-512%2C-512z%22%20fill%3D%22%23b2dbff%22%20%2F%3E%3Cpath%20d%3D%22m112.889%2C516.69136c0%2C-220.66841%20179.33611%2C-399.5555%20399.5555%2C-399.5555c220.66841%2C0%20399.5555%2C179.33611%20399.5555%2C399.5555c0%2C220.66841%20-179.33611%2C399.5555%20-399.5555%2C399.5555c-220.66841%2C0%20-399.5555%2C-179.33611%20-399.5555%2C-399.5555z%22%20fill%3D%22%230677DA%22%20%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        background-color: $flow-done-color;
+        border: .1rem solid lighten($flow-done-color, 35);
       }
 
       + li {
@@ -44,7 +45,7 @@ $flow-item-vertical-font-family: "PingFangSC-Medium", "SFUIText-Medium", "Micros
       }
 
       &.done + li {
-        background: $flow-done-color;
+        background-color: $flow-done-color
       }
 
       &.process + li {
@@ -92,7 +93,6 @@ $flow-item-vertical-font-family: "PingFangSC-Medium", "SFUIText-Medium", "Micros
     em {
       color: $flow-item-content-color;
       font-size: $flow-item-content-size;
-      line-height: $flow-item-content-size;
       word-wrap: normal;
       white-space: normal;
       word-break: keep-all;
@@ -111,7 +111,7 @@ $flow-item-vertical-font-family: "PingFangSC-Medium", "SFUIText-Medium", "Micros
       flex: 0 0 0.875rem;
       flex-direction: column;
       padding: 0;
-      margin: 0 1.125rem 0 0;
+      margin: 0;
 
       > li:nth-child(odd) {
         + li {
@@ -134,6 +134,7 @@ $flow-item-vertical-font-family: "PingFangSC-Medium", "SFUIText-Medium", "Micros
 
       > li {
         text-align: left;
+        flex: 1;
 
         &:not(:last-child) {
           height: 4rem;
